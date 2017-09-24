@@ -51,12 +51,16 @@ public class Search {
     {
       if(arr[i].getFunding() > minFunding)
       {
-          for(int p = 0; p<i; p++)
+          for(int p = 0; p<=i; p++)
           {
               if(high < arr[p].getFunding())
               {
                   high = arr[p].getFunding();
-                  pos = p;
+                  if(high > minFunding)
+                  {
+                      pos = p;
+                      break;
+                  }
               }
           }
           return Optional.of(pos);
@@ -110,10 +114,13 @@ public class Search {
         {
             return Optional.of(mid);
         }
-        if((high+low) <= 1 && arr[mid].getFunding() >= minFunding)
+        if((high-low) <= 1 )
         {
-            System.out.println((low+high)/2f);
-            return Optional.of(mid);
+            if(arr[low].getFunding() < minFunding)
+            {
+                return Optional.of(high);
+            }else
+            return Optional.of(low);
         }
 
     }

@@ -95,19 +95,19 @@ public class TestSearch {
   @Test
   public void testMinFundingArrayFast0() {
     final Team[] arr = makeArrayFixture(0);
-    assertEquals(Search.findTeamMinFundingFast(arr, 1000),Optional.of(arr.length-1));
+    assertEquals(Search.findTeamMinFundingFast(arr, 1000),Optional.empty());
   }
 
   @Test
   public void testMinFundingArrayFast10s() {
     final Team[] arr = makeArrayFixture(10);
-    assertEquals(Search.findTeamMinFundingFast(arr, 500), Optional.of(4));
+    assertEquals(Search.findTeamMinFundingFast(arr, 500), Optional.of(5));
   }
 
   @Test
   public void testMinFundingArrayFast10f() {
     final Team[] arr = makeArrayFixture(10);
-    assertEquals(Search.findTeamMinFundingFast(arr, 2000),Optional.of(arr.length-1));
+    assertEquals(Search.findTeamMinFundingFast(arr, 2000),Optional.empty());
   }
 
 
