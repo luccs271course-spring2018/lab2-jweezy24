@@ -1,7 +1,7 @@
 
 
 # Question 1
-
+All of the searching methods are O(n). The reason being is that they all use only one for loop and they have a set amount of operations that are linear.  
 
 # Question 2
 If the array is not sorted, then the binary search won't work. The reason being is the binary search relies solely on the fact that the middle of the array is the middle most value. If the values are not sorted, then the middle of the array could be the biggest value, smallest value, or any arbitrary number in between. So, cutting out half the array based on a value that very well may not be the actual center of the array leads to a potential deletion of the actual value that the user is looking for. Thus, the binary search without the array being sorted is pointless.
