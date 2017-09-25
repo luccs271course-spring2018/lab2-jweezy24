@@ -51,7 +51,10 @@ public class Main {
       final int pos = index.get();
       final Team team = array[pos];
       // TODO DRY - eliminate this code duplication
+      //The team object's constructor will display all the information the object knows
       System.out.println( team.toString());
+      //The printStatements method will display everything that has to do with the position
+      //The reason being is the team object has no idea about position in a specific array
       printStatments(pos);
     } else {
       System.out.println("Not Found!");

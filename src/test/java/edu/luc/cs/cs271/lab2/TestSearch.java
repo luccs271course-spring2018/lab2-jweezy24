@@ -79,7 +79,7 @@ public class TestSearch {
   @Test
   public void testMinFundingArray10s() {
     final Team[] arr = makeArrayFixture(10);
-    assertEquals(Search.findTeamMinFunding(arr, 500), Optional.of(4));
+    assertEquals(Search.findTeamMinFunding(arr, 500), Optional.of(5));
   }
 
   @Test

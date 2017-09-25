@@ -16,10 +16,12 @@ public class Team {
     if (name == null) {
       throw new IllegalArgumentException("name is null");
     }
+    //Checks for a null value then throws a error if that is true
     if(headcoach == null)
     {
       throw new IllegalArgumentException("headcoach is null");
     }
+    //Checks if funding is less than zero because a team cannont have a negative funding
     if(funding < 0)
     {
       throw new IllegalArgumentException("Funding is negative");
